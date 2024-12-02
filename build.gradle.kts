@@ -25,8 +25,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	testRuntimeOnly("com.h2database:h2")
+	//testRuntimeOnly("com.h2database:h2")
 	runtimeOnly("com.mysql:mysql-connector-j")
+	testImplementation("org.springframework.boot:spring-boot-testcontainers")
+	testImplementation("org.testcontainers:mysql")
+	testImplementation("org.testcontainers:junit-jupiter")
 }
 tasks.named<BootBuildImage>("bootBuildImage") {
 	// Enable CDS and Spring AOT
